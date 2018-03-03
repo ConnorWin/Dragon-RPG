@@ -54,8 +54,14 @@
      <Compile Include="Assets\Camera &amp; UI\CameraFollow.cs" />
      <Compile Include="Assets\Camera &amp; UI\CameraRaycaster.cs" />
      <Compile Include="Assets\Camera &amp; UI\CursorAffordance.cs" />
+     <Compile Include="Assets\Camera &amp; UI\PlayerHealthBar.cs" />
+     <Compile Include="Assets\Enemies\Enemy.cs" />
+     <Compile Include="Assets\Enemies\EnemyHealthBar.cs" />
+     <Compile Include="Assets\Enemies\EnemyUI.cs" />
+     <Compile Include="Assets\Player\Player.cs" />
      <Compile Include="Assets\Player\PlayerMovement.cs" />
-     <Compile Include="Assets\Utility.cs" />
+     <Compile Include="Assets\Utility\SpinMe.cs" />
+     <None Include="Assets\FantasyEnvironments\Environments\README.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
