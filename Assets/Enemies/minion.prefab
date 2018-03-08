@@ -2486,7 +2486,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519880313695970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.27, y: 3.71, z: 9.79}
+  m_LocalPosition: {x: -2.51, y: -0.86, z: -17.63}
   m_LocalScale: {x: 1, y: 0.6409215, z: 1}
   m_Children:
   - {fileID: 4942506871711102}
@@ -2717,7 +2717,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 100
-  attackRadius: 100
+  attackRadius: 7
+  moveRadius: 5
 --- !u!136 &136089636416340944
 CapsuleCollider:
   m_ObjectHideFlags: 1

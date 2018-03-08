@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,8 +42,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
   controlID: 28
 --- !u!114 &3
@@ -116,15 +116,15 @@ MonoBehaviour:
     y: 564
     width: 1461
     height: 383
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 16}
   - {fileID: 21}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,8 +209,8 @@ MonoBehaviour:
     y: 0
     width: 1461
     height: 947
-  m_MinSize: {x: 406, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 406, y: 342}
+  m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
   controlID: 29
 --- !u!114 &10
@@ -449,18 +449,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Player
+    - Assets/Camera & UI
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Player
+  - Assets/Camera & UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Connor\Documents\Unity\Dragon RPG
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 23}
-    m_SelectedIDs: b4280000
-    m_LastClickedID: 10420
+    m_SelectedIDs: 12290000
+    m_LastClickedID: 10514
     m_ExpandedIDs: 00000000d02700001a2800005a280000b2280000182900003a2900006e290000062a0000422a0000502a0000f02e0000f22e0000f42e0000f62e0000f82e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -514,9 +514,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 141cfeff
+    m_LastClickedInstanceID: -123884
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000b0270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -607,9 +607,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 9efbffff00000000
+    m_SelectedIDs: 8a20feff141cfeff9a1dfeff921dfeff041ffeff
+    m_LastClickedID: -123132
+    m_ExpandedIDs: c020feff224bfeff9e68feff16dcffff4cefffff9efbffff00000000744c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -628,7 +628,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - village
+  - Combat Sandbox 2
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -660,14 +660,14 @@ MonoBehaviour:
     height: 543
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 30476.238130184156
+  lastFramingTime: 360.2628524909674
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.427572, y: 87.561195, z: -7.0154505}
+    m_Target: {x: -12.216016, y: 92.60941, z: -7.2332997}
     speed: 2
-    m_Value: {x: 6.427572, y: 87.561195, z: -7.0154505}
+    m_Value: {x: -12.216016, y: 92.60941, z: -7.2332997}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -691,13 +691,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.29342967, y: 0.3982479, z: -0.13614234, w: 0.85834897}
+    m_Target: {x: 0.14496571, y: 0.2617075, z: -0.039794303, w: 0.953368}
     speed: 2
-    m_Value: {x: 0.29342967, y: 0.39824787, z: -0.13614234, w: 0.85834897}
+    m_Value: {x: 0.14496571, y: 0.2617075, z: -0.039794303, w: 0.953368}
   m_Size:
-    m_Target: 12.75673
+    m_Target: 22.706234
     speed: 2
-    m_Value: 12.75673
+    m_Value: 22.706234
   m_Ortho:
     m_Target: 0
     speed: 2
