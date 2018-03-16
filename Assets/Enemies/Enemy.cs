@@ -7,9 +7,15 @@ public class Enemy : MonoBehaviour, IDamageable {
 
     [SerializeField] float maxHealthPoints = 100f;
     [SerializeField] float attackRadius = 5f;
+    [SerializeField] float damagePerShot = 1f;
+    [SerializeField] float secondsBetweenShots = 0.5f;
     [SerializeField] float moveRadius = 5f;
+    [SerializeField] GameObject projectileToUse;
+    [SerializeField] GameObject projectileSocket;
+    [SerializeField] Vector3 aimOffset = new Vector3(0, 1f, 0);
 
-    float currentHealthPoints = 100f;
+    bool isAttacking = false;
+    float currentHealthPoints;
     AICharacterControl aiCharacterControl = null;
     GameObject player = null;
 
@@ -24,20 +30,29 @@ public class Enemy : MonoBehaviour, IDamageable {
     public void TakeDamage(float damage)
     {
         currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
+        if(currentHealthPoints <= 0) { Destroy(gameObject); }
     }
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         aiCharacterControl = GetComponent<AICharacterControl>();
+        currentHealthPoints = maxHealthPoints;
     }
 
     void Update()
     {
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-        if(distanceToPlayer <= attackRadius)
+        if(distanceToPlayer <= attackRadius && !isAttacking)
         {
-            print(gameObject.name + " attacking player");
+            isAttacking = true;
+            InvokeRepeating("SpawnProjectile", 0f, secondsBetweenShots); //invoke real coroutine
+        }
+
+        if(distanceToPlayer > attackRadius)
+        {
+            isAttacking = false;
+            CancelInvoke();
         }
 
         if (distanceToPlayer <= moveRadius)
@@ -48,6 +63,17 @@ public class Enemy : MonoBehaviour, IDamageable {
         {
             aiCharacterControl.SetTarget(transform);
         }
+    }
+    void SpawnProjectile()
+    {
+        GameObject newShot = Instantiate(projectileToUse, projectileSocket.transform.position, Quaternion.identity);
+        Projectile projectileComponent = newShot.GetComponent<Projectile>();
+        projectileComponent.Set(damagePerShot);
+
+        Vector3 unitVectorToPlayer = (player.transform.position + aimOffset - projectileSocket.transform.position).normalized;
+        float projectileSpeed = projectileComponent.projectileSpeed;
+        newShot.GetComponent<Rigidbody>().velocity = unitVectorToPlayer * projectileSpeed;
+        print(unitVectorToPlayer);
     }
 
     void OnDrawGizmos()
